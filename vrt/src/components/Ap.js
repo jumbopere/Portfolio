@@ -52,7 +52,7 @@ const Ap = (props) => {
           formData.append('description', description);
   
           setErrorMsg('');
-          await axios.post('http://localhost:4000/file/upload', formData, {
+          await axios.post('/file/upload', formData, {
             headers: {
               'Content-Type': 'multipart/form-data'
             }

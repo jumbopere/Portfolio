@@ -11,7 +11,7 @@ const ListBar = (props) => {
             <td>{props.student.studentNumber}</td>
             <td>{props.student.studentEntry}</td>
             <td>
-                {props.student.studentVerification ? <Badge color="primary">Verified</Badge> : <Badge color="warning">Not Verified</Badge>}
+                {props.student.studentVerification ? <Badge color="primary">Verified</Badge> : <Badge color="success">Verified</Badge>}
             </td>
             <td>
                 <Link to={"/edit/" + props.student._id}><AiOutlineEdit /></Link>

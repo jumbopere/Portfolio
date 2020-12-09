@@ -1,6 +1,8 @@
 import React from "react"
 import { Link} from "react-router-dom"
 import Footer from "./Footer"
+import top from './top.png'
+
 
 function Home() {
     return (
@@ -19,13 +21,13 @@ function Home() {
   
                 <div className="w3-white w3-text-grey w3-card-4">
                   <div className="w3-display-container">
-                    <img src="/w3images/avatar_hat.jpg"
+                    <img  src = {top}
                       style={
                         { width: '100%' }
                       }
                       alt="Avatar" />
-                    <div className="w3-display-bottomright w3-container w3-text-black">
                       <h2>Jumbo Pere</h2>
+                    <div className="w3-display-bottomright w3-container w3-text-black">
                     </div>
                   </div>
                   <div className="w3-container">
@@ -199,10 +201,10 @@ function Home() {
               </div>
   
             </div>
-  <Footer/>
   
   
           </div>
+  <Footer/>
         
         
        

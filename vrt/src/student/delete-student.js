@@ -16,7 +16,7 @@ const DeleteStudent = (props) => {
     useEffect(() => {
         const fetchData = async () => {
             const result = await axios(
-                `http://localhost:4000/all_student/${props.match.params.id}`
+                `/all_student/${props.match.params.id}`
             );
             setData({ ...result.data });
         };
@@ -25,7 +25,7 @@ const DeleteStudent = (props) => {
 
     const onDeleteStudentData = (e) => {
         e.preventDefault();
-        axios.delete(`http://localhost:4000/all_student/delete/${props.match.params.id}`, data).then(res => console.log(res.data));
+        axios.delete(`/all_student/delete/${props.match.params.id}`, data).then(res => console.log(res.data));
         props.history.push('/');
     }
 

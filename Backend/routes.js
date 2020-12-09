@@ -30,6 +30,7 @@ crudRoutes.post('/add',(req, res) => {
     if(!isValid) {
         return res.status(400).json(errors);
     }
+
     Crud.findOne({
         studentNumber: req.body.studentNumber
     }).then(user => {
@@ -46,18 +47,23 @@ crudRoutes.post('/add',(req, res) => {
                 studentNumber: req.body.studentNumber,
                 studentEntry: req.body.studentEntry,
                 studentYear: req.body.studentYear,
-              
+                
             });
-           
-studentVerification = true
-
                 
                            
                             newStudent
                                 .save()
-                                .then(user => {
+                                .then(user=> {
+                                    if (!user) {
+                                        return res.status(400).send({
+                                            message: 'an errror occured'
+                                        })
+                                    }
                                     res.json(user)
-                                }); 
+                                    
+                                }).catch(err=>{
+                                    console.log(err); 
+                                })
                         
                     
                 

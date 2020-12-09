@@ -11,7 +11,8 @@ const CreateStudent = (props) => {
         studentNumber: "",
         studentEntry: "",
         studentYear: "",
-        student_Verification: false
+        student_Verification: true,
+    
     });
 
     const onChangeStudentData = (e) => {
@@ -23,7 +24,7 @@ const CreateStudent = (props) => {
 
     const onSubmitStudentData = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:4000/all_student/add', data).then(res => console.log(res.data));
+        axios.post('/all_student/add', data).then(res => console.log(res.data));
         setData({
             studentName: "",
             studentAddress: "",
@@ -31,9 +32,10 @@ const CreateStudent = (props) => {
             studentEntry: "",
             studentYear: "",
             
-            studentVerification: false
+            studentVerification: true
         });
-
+      
+        props.history.push('/');
     }
 
     return (
@@ -67,7 +69,7 @@ const CreateStudent = (props) => {
                     <Col>
                         <Label><AiOutlineExport /> Student Number </Label>
                         <Input
-                            type="number"
+                            type="text"
                             name="studentNumber"
                             className="form-control"
                             value={data.studentNumber}
@@ -96,8 +98,9 @@ const CreateStudent = (props) => {
                             />
                     </Col>
                 </FormGroup>
-                <Button color="primary"><AiOutlineForward /> Submit</Button>
+                <Button color="primary" > <AiOutlineForward /> Submit</Button>
             </Form>
+
         </div>
     );
 }

@@ -4,31 +4,34 @@ const Schema = mongoose.Schema;
 
 const studentSchema = new Schema({
     studentName: {
-        type: String
+        type: String,
+        required: true
       
     },
     studentNumber: {
-        type: String
+        type: String,
+        required: true
        
     },
     
     studentAddress: {
         type: String,
-        
+        required: true
     },
     studentEntry: {
         type: String,
-     
+     required: true
     },
     studentYear: {
-        type: String
+        type: String,
+        required:true
     },
    studentVerfication : {
         type: Boolean,
-       
-        default: false
+        required: true,
+        default: true
     },
-    Date: { type: Date, required: true, default: Date.now }
+    Date: { type: Date, required: true, default: Date.now },
 
 }
 );
