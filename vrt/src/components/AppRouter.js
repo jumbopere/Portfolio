@@ -3,10 +3,12 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import App from '../components/Ap';
 import Header from '../components/Navbar';
 import FilesList from '../components/FilesList';
+import Footer from '../Footer'
 
 const AppRouter = () => (
   <BrowserRouter>
-    <div className="container">
+  
+    <div >
       <Header />
       <div className="main-content">
         <Switch>
@@ -14,7 +16,11 @@ const AppRouter = () => (
           <Route component={FilesList} path="/list" />
         </Switch>
       </div>
-    </div>
+  <div className = "w3-bottom">
+<Footer/>
+  </div>
+    
+  </div>
   </BrowserRouter>
 );
 

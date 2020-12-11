@@ -6,11 +6,8 @@ import top from './top.png'
 
 function Home() {
     return (
-        <div className="w3-light-grey">
-      <div >
-       
-  
-  
+        <div >
+      <div  >
           <div className="w3-content w3-margin-top" style = {{maxWidth:"1400px"}} >
   
   

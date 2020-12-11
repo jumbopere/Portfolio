@@ -25,17 +25,17 @@ const CreateStudent = (props) => {
     const onSubmitStudentData = (e) => {
         e.preventDefault();
         axios.post('/all_student/add', data).then(res => console.log(res.data));
+
         setData({
             studentName: "",
             studentAddress: "",
             studentNumber: "",
             studentEntry: "",
             studentYear: "",
-            
-            studentVerification: true
+            studentVerification: true,
         });
-      
-        props.history.push('/');
+ alert("Student Created")
+ props.history.push('/list');
     }
 
     return (
@@ -48,6 +48,7 @@ const CreateStudent = (props) => {
                         <Label><AiOutlineUser /> Student Name </Label>
                         <Input
                             type="text"
+                            placeholder = "Please your Name"
                             name="studentName"
                             className="form-control"
                             value={data.studentName}
@@ -59,6 +60,7 @@ const CreateStudent = (props) => {
                         <Label><AiOutlineExport /> Address </Label>
                         <Input
                             type="text"
+                            placeholder= "Please Enter Your Address"
                             name="studentAddress"
                             className="form-control"
                             value={data.studentAddress}
@@ -70,6 +72,7 @@ const CreateStudent = (props) => {
                         <Label><AiOutlineExport /> Student Number </Label>
                         <Input
                             type="text"
+                            placeholder = "Please Enter A Valid Student Number"
                             name="studentNumber"
                             className="form-control"
                             value={data.studentNumber}
@@ -83,7 +86,7 @@ const CreateStudent = (props) => {
                             type="text"
                             name="studentEntry"
                             className="form-control"
-                           
+                           placeholder= "Please Enter Your Entry Level"
                             value={data.studentEntry}
                             onChange={onChangeStudentData} />
                     </Col>
@@ -91,6 +94,7 @@ const CreateStudent = (props) => {
                         <Label><AiOutlineExport /> Entry Year </Label>
                         <Input
                             type="text"
+                            placeholder = "Please Your Entry Year"
                             name="studentYear"
                             className="form-control"
                             value={data.studentYear}

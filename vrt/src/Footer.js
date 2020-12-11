@@ -4,7 +4,9 @@ import React from "react"
 
 function Footer() {
   return (
-    <div className="w3-container w3-teal w3-center w3-margin-top">
+
+    
+    <div className="  w3-container w3-teal w3-center w3-margin-top">
     <p>Find me on social media.</p>
     <a href="https://www.linkedin.com/in/perejumbo">
       <i className="fa fa-linkedin w3-hover-opacity"></i>
@@ -26,7 +28,7 @@ function Footer() {
                   <a href="/home.html" target="_blank">JumboPere</a>
     </p>
   </div>
-
+  
   
  
   );
